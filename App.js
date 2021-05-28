@@ -5,6 +5,7 @@ import ComponentsScreen from './src/screens/ComponentsScreen';
 import HomeworkScreen2_16 from './src/screens/HomeworkScreen2_16';
 import ListScreen from './src/screens/ListScreen';
 import WebView from './src/screens/WebView';
+import ImageGallery from './src/screens/ImageGallery';
 
 const navigator = createStackNavigator(
   {
@@ -13,9 +14,10 @@ const navigator = createStackNavigator(
     Homework2_16: HomeworkScreen2_16,
     List: ListScreen,
     Web: WebView,
+    Gallery: ImageGallery,
   },
   {
-    initialRouteName: 'List',
+    initialRouteName: 'Home',
     defaultNavigationOptions: {
       title: 'React Native App',
     },
