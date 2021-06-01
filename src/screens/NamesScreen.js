@@ -1,33 +1,44 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, Button, FlatList } from "react-native";
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Button, FlatList } from 'react-native';
+import Data from '../../data/names.json';
 
 const NamesScreen = () => {
-  const [colors, setColors] = useState([]);
+  const namesArray = Data.names.data;
+  console.log('namesArray', namesArray);
+  const [names, setAName] = useState(namesArray);
 
   return (
     <View style={styles.container}>
-      <Text style={ styles.menu }>Show me some colors</Text>
+      <Text style={ styles.menu }>Show me some names</Text>
 
       <Button
         onPress={() => {
-          setColors([...colors, randomRgb()]);
+          setAName([...names, addNewName()]);
         }}
         style={styles.btn}
-        title='Add a Color' />
+        title="Show me a another name" />
 
       <View style={styles.colorWrapper}>
+
         <FlatList
-          keyExtractor={(item) => item}
-          data={colors}
+          keyExtractor={(item) => item.name}
+          data={names}
           renderItem={({ item }) => {
             return (
-              <View style={{ height: 100, width: 100, backgroundColor: item }} />
+              <Text style={{ height: 30, width: 100, textAlign: 'center' }} >
+                { item.name }
+              </Text>
             )
           }} />
 
       </View>
     </View>
   );
+};
+
+const addNewName = () => {
+  console.log('addNewName');
+  return 'jackson';
 };
 
 const styles = StyleSheet.create({
@@ -45,14 +56,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   }
 });
-
-const randomRgb = () => {
-  const red = Math.floor(Math.random() * 256);
-  const green = Math.floor(Math.random() * 256);
-  const blue = Math.floor(Math.random() * 256);
-  const rgb = `rgb(${red}, ${green}, ${blue})`;
-  console.log(rgb);
-  return rgb;
-};
 
 export default NamesScreen;
