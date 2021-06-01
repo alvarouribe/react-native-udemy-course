@@ -2,34 +2,42 @@ import React from "react";
 import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = (props) => {
-  // console.log(props);
+  console.log(props);
   // console.log(props.navigation);
   // props.navigation.navigate
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.text}>🐸 Welcome mr Alvaro 🐸</Text>
-      <Button
-        title='Soy un boton! :S'
-        onPress={() => {
-          console.log('Button onPress WTFF');
-      }} />
-
-      <TouchableOpacity onPress={() => { console.log('Touchable Opacity WTF'); }} >
-        <Text style={styles.text}>I am a Text inside TouchableOpacity</Text>
-      </TouchableOpacity>
 
       <Text style={ styles.menu }>MENU</Text>
 
       <Button
         onPress={() => props.navigation.navigate('Gallery') }
+        style={styles.btn}
         title='Gallery Example'/>
 
       <Button
         onPress={() => props.navigation.navigate('List') }
+        style={styles.btn}
         title='List Example'/>
 
-      <TouchableOpacity onPress={() => { props.navigation.navigate('Components') }} >
+      <Button
+        onPress={() => props.navigation.navigate('Counter') }
+        style={styles.btn}
+        title='Counter Example'/>
+
+      <Button
+        onPress={() => props.navigation.navigate('Colors') }
+        style={styles.btn}
+        title='Colors Example'/>
+
+      <Button
+        onPress={() => props.navigation.navigate('Names') }
+        style={styles.btn}
+        title='Names Example'/>
+
+      <TouchableOpacity style={styles.touchOpa} onPress={() => { props.navigation.navigate('Components') }} >
         <Text style={styles.text}>Components Example</Text>
       </TouchableOpacity>
     </View>
@@ -37,9 +45,26 @@ const HomeScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'space-around'
+  },
   text: {
     fontSize: 30,
     textAlign: 'center',
+
+  },
+  btn: {
+    padding: 5,
+    margin: 5,
+    marginVertical: 8,
+  },
+  touchOpa: {
+    borderWidth: 3,
+    borderColor: 'blue',
+    borderRadius: 30,
+    padding: 5,
+    margin: 5
   },
   btn: {
     borderColor: 'red',
@@ -48,7 +73,8 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   menu: {
-    marginVertical:20,
+    marginVertical: 20,
+    textAlign: 'center',
   }
 });
 

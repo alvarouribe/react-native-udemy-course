@@ -6,6 +6,9 @@ import HomeworkScreen2_16 from './src/screens/HomeworkScreen2_16';
 import ListScreen from './src/screens/ListScreen';
 import WebView from './src/screens/WebView';
 import ImageGallery from './src/screens/ImageGallery';
+import CounterScreen from './src/screens/CounterScreen';
+import ColorScreen from './src/screens/ColorScreen';
+import NamesScreen from './src/screens/NamesScreen';
 
 const navigator = createStackNavigator(
   {
@@ -15,11 +18,14 @@ const navigator = createStackNavigator(
     List: ListScreen,
     Web: WebView,
     Gallery: ImageGallery,
+    Counter: CounterScreen,
+    Colors: ColorScreen,
+    Names: NamesScreen,
   },
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      title: 'React Native App',
+      title: 'AlvaroApp',
     },
   }
 );

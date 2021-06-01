@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
-const ImageItem = props => {
+const ImageItem = ({ title, imageSource }) => {
   // console.log('props', props);
   // props Object {
   //   "title": "Jungle",
@@ -9,8 +9,10 @@ const ImageItem = props => {
 
   return (
     <View>
-      <Image source={ props.imageSource } />
-      <Text style={styles.h2}>{ props.title }</Text>
+      <TouchableOpacity onPress={() => { console.log(`image "${title}" clicked.`); }} >
+        <Image source={ imageSource } />
+      </TouchableOpacity>
+      <Text style={styles.h2}>{ title }</Text>
     </View>
   );
 };
