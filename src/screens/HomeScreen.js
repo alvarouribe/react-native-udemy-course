@@ -28,6 +28,11 @@ const HomeScreen = (props) => {
         title='Counter Example'/>
 
       <Button
+        onPress={() => props.navigation.navigate('Reducer') }
+        style={styles.btn}
+        title='Reducer Example'/>
+
+      <Button
         onPress={() => props.navigation.navigate('Colors') }
         style={styles.btn}
         title='Colors Example'/>
@@ -36,6 +41,11 @@ const HomeScreen = (props) => {
         onPress={() => props.navigation.navigate('Names') }
         style={styles.btn}
         title='Names Example'/>
+
+      <Button
+        onPress={() => props.navigation.navigate('Web') }
+        style={styles.btn}
+        title='Web Example'/>
 
       <TouchableOpacity style={styles.touchOpa} onPress={() => { props.navigation.navigate('Components') }} >
         <Text style={styles.text}>Components Example</Text>

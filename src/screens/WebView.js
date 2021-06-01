@@ -1,11 +1,22 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 const WebViewScreen = () => {
-  return <WebView source={{ uri: 'http://www.flyingdolly.co.nz' }} />
+  return (
+    <View style={styles.container}>
+      <WebView
+        source={{ uri: 'http://www.flyingdolly.co.nz' }}
+        style={{ backgroundColor: 'blue' }} />
+    </View>
+  )
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'blue'
+  }
+});
 
 export default WebViewScreen;
