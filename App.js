@@ -6,10 +6,13 @@ import HomeworkScreen2_16 from './src/screens/HomeworkScreen2_16';
 import ListScreen from './src/screens/ListScreen';
 import WebView from './src/screens/WebView';
 import ImageGallery from './src/screens/ImageGallery';
-import CounterScreen from './src/screens/CounterScreen';
+// import CounterScreen from './src/screens/CounterScreen';
+import CounterScreen from './src/screens/CounterScreen_reducer';
 import ColorScreen from './src/screens/ColorScreen';
 import NamesScreen from './src/screens/NamesScreen';
-import ReducerScreen from './src/screens/ReducerScreen';
+// import ReducerScreen from './src/screens/ReducerScreen';
+import ReducerScreen from './src/screens/Reducer_COMMUNITY_CONVENTION';
+import TextScreen from './src/screens/TextScreen';
 
 const navigator = createStackNavigator(
   {
@@ -23,6 +26,7 @@ const navigator = createStackNavigator(
     Colors: ColorScreen,
     Names: NamesScreen,
     Reducer: ReducerScreen,
+    Text: TextScreen,
   },
   {
     initialRouteName: 'Home',
