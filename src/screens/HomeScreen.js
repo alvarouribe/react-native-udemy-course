@@ -55,7 +55,7 @@ const HomeScreen = (props) => {
       <Button
         onPress={() => props.navigation.navigate('Box') }
         style={styles.btn}
-        title='Box Example'/>
+        title='FlexBox Example'/>
 
       <TouchableOpacity style={styles.touchOpa} onPress={() => { props.navigation.navigate('Components') }} >
         <Text style={styles.text}>Components Example</Text>
