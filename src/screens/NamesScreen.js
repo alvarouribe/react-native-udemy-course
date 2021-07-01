@@ -13,10 +13,10 @@ const NamesScreen = () => {
 
       <Button
         onPress={() => {
-          setAName([...names, addNewName()]);
+          setAName([...names, addNewName(names)]);
         }}
         style={styles.btn}
-        title="Show me a another name" />
+        title="Show me more names" />
 
       <View style={styles.colorWrapper}>
 
@@ -36,9 +36,10 @@ const NamesScreen = () => {
   );
 };
 
-const addNewName = () => {
-  console.log('addNewName');
-  return 'jackson';
+const addNewName = (names) => {
+  console.log('addNewName names', names);
+  const newId = names.length + 1;
+  return { 'id': newId, 'name': `Jackson ${newId}` };
 };
 
 const styles = StyleSheet.create({
