@@ -13,6 +13,7 @@ import NamesScreen from './src/screens/NamesScreen';
 // import ReducerScreen from './src/screens/ReducerScreen';
 import ReducerScreen from './src/screens/Reducer_COMMUNITY_CONVENTION';
 import TextScreen from './src/screens/TextScreen';
+import BoxScreen from './src/screens/BoxScreen';
 
 const navigator = createStackNavigator(
   {
@@ -27,6 +28,7 @@ const navigator = createStackNavigator(
     Names: NamesScreen,
     Reducer: ReducerScreen,
     Text: TextScreen,
+    Box: BoxScreen,
   },
   {
     initialRouteName: 'Home',
