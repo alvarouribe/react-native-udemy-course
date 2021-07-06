@@ -20,6 +20,14 @@ const BoxScreen = () => {
         <Text style={styles.textTwoStyle}>Child #2 (flex 1)</Text>
         <Text style={styles.textThreeStyle}>Child #3</Text>
       </View>
+
+      <Text>Tarea 82</Text>
+
+      <View style={styles.rowView82}>
+        <Text style={styles.textOne82}>Child #1</Text>
+        <Text style={styles.textTwo82}>Child #2</Text>
+        <Text style={styles.textThree82}>Child #3</Text>
+      </View>
     </View>
   );
 };
@@ -80,6 +88,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: 200,
   },
+
   textOneStyle: {
     borderWidth: 2,
     borderColor: 'red',
@@ -94,6 +103,36 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'red',
     // Flex 1 - It will try to grab as much space that it can
+  },
+  // Homework chapter 82
+  rowView82: {
+    borderWidth: 1,
+    borderColor: 'black',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 160
+  },
+  textOne82: {
+    height: 80,
+    width: 80,
+    borderWidth: 2,
+    borderColor: 'red',
+  },
+  textTwo82: {
+    height: 80,
+    width: 80,
+    borderWidth: 2,
+    borderColor: 'red',
+    top: 80,
+    // or alignSelf: 'flex-end'
+    // or marginTop: 40
+    // or paddingTop: 40
+  },
+  textThree82: {
+    height: 80,
+    width: 80,
+    borderWidth: 2,
+    borderColor: 'red',
   }
 });
 
